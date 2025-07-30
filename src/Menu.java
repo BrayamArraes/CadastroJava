@@ -14,6 +14,7 @@ public class Menu {
             System.out.println("1 - Cadastrar pessoa");
             System.out.println("2 - Listar pessoas cadastradas");
             System.out.println("3 - Localizar pessoa pelo CPF");
+            System.out.println("4 - Remover pessoa");
             System.out.println("0 - Sair");
             System.out.println("*********************************");
             System.out.print("Escolha sua opção: ");
@@ -25,6 +26,7 @@ public class Menu {
                 case 1 -> adicionarPessoa();
                 case 2 -> listarPessoas();
                 case 3 -> buscarPessoaPorCpf();
+                case 4 -> removerPessoa();
                 default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
@@ -39,6 +41,12 @@ public class Menu {
         scanner.nextLine(); // limpa o buffer
         System.out.print("CPF: ");
         String cpf = scanner.nextLine();
+
+        //tratamento de erro com condição
+        if (cadastro.buscarPorCpf(cpf) != null){
+            System.out.println("CPF já cadastrado");
+            return;
+        }
 
         cadastro.adicionar(new Pessoa(nome, idade, cpf));
         System.out.println("Pessoa cadastrada com sucesso!");
@@ -62,6 +70,19 @@ public class Menu {
             System.out.println("Pessoa encontrada: " + encontrada);
         } else {
             System.out.println("Pessoa com CPF " + cpf + " não encontrada.");
+        }
+    }
+
+    private void removerPessoa(){
+        System.out.print("Digite o CPF da para remover: ");
+        String cpf = scanner.nextLine();
+        Pessoa removercpf = cadastro.removercpf(cpf);
+
+        if (removercpf != null){
+            System.out.println("Pessoa Removida: " + removercpf);
+        }
+        else {
+            System.out.println("Pessoa com CPF: " + cpf + " Não encontrado!");
         }
     }
 }

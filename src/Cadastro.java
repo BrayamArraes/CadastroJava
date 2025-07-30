@@ -5,4 +5,5 @@ public interface Cadastro {
     void adicionar(Pessoa pessoa);
     List<Pessoa> listar();
     Pessoa buscarPorCpf(String cpf);
+    Pessoa removercpf(String cpf);
 }

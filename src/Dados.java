@@ -25,7 +25,8 @@ public class Dados implements Cadastro {
         return pessoas.get(cpf);
     }
 
-    // atualizando ....
-    //public Pessoa RemoverCpf(String cpf) {
-      //  return pessoas.remove(cpf);
+    @Override
+    public Pessoa removercpf(String cpf) {
+        return pessoas.remove(cpf);
+    }
 }
