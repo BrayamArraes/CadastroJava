@@ -9,6 +9,16 @@ Este é um projeto simples feito em Java para cadastro de pessoas via console. E
 - Menu interativo com tratamento de erros
 - Armazenamento em memória (utilizando `List`)
 
+  ## ✅ Conteúdo
+
+- [x] Cadastro de Pessoas
+- [x] Menu com `switch` e `do/while`
+- [x] Uso de `HashMap` para controle de dados
+- [x] Verificação de duplicidade via CPF
+- [ ] Leitura e escrita de arquivos
+- [ ] Tratamento de exceções
+- [ ] Interface gráfica (em breve)
+
 ## 🛠 Tecnologias utilizadas
 
 - Java 21 ou superior
