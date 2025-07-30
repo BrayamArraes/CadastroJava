@@ -1,7 +1,8 @@
 import java.util.List;
 
-//interface com métodos (listar e adicionar)
+// metodos para adicionar, listar e buscar
 public interface Cadastro {
     void adicionar(Pessoa pessoa);
     List<Pessoa> listar();
+    Pessoa buscarPorCpf(String cpf);
 }

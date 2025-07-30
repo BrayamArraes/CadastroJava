@@ -1,31 +1,23 @@
-// classe que representa a pessoa
 public class Pessoa {
-    private String nome;
-    private int idade;
+    private final String nome;
+    private final int idade;
+    private final String cpf;
 
-    public Pessoa(String nome, int idade) {
+
+    // Construtores da class
+    public Pessoa(String nome, int idade, String cpf) {
         this.nome = nome;
         this.idade = idade;
+        this.cpf = cpf;
     }
 
-    //Setters
-    public void setNome(String nome, int idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
-
-    //Getters
-    public String getNome() {
-        return nome;
-    }
-
-    public int getIdade() {
-        return idade;
+    //getters
+    public String getCpf() {
+        return cpf;
     }
 
     @Override
-    public String toString(){
-        return nome + " " + idade + " Anos";
+    public String toString() {
+        return nome + " - " + idade + " anos - CPF: " + cpf;
     }
-
 }
